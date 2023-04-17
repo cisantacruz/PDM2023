@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Cantidad de dinero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="169dp"
+        android:text="0"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.05"
+        app:layout_constraintEnd_toEndOf="@+id/fivecentButton"
+        app:layout_constraintStart_toStartOf="@+id/fivecentButton"
+        app:layout_constraintTop_toBottomOf="@+id/fivecentButton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.10"
+        app:layout_constraintEnd_toEndOf="@+id/tencentButton"
+        app:layout_constraintStart_toStartOf="@+id/tencentButton"
+        app:layout_constraintTop_toBottomOf="@+id/tencentButton" />
+
+    <ImageButton
+        android:id="@+id/quatercentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dollarButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@mipmap/quater2_icon" />
+
+    <ImageButton
+        android:id="@+id/dollarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/quatercentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/quatercentButton"
+        app:layout_constraintTop_toTopOf="@+id/quatercentButton"
+        app:srcCompat="@mipmap/onedollar_icon" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="$0.25"
+        app:layout_constraintEnd_toEndOf="@+id/quatercentButton"
+        app:layout_constraintStart_toStartOf="@+id/quatercentButton"
+        app:layout_constraintTop_toBottomOf="@+id/quatercentButton" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1.00"
+        app:layout_constraintEnd_toEndOf="@+id/dollarButton"
+        app:layout_constraintStart_toStartOf="@+id/dollarButton"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <ImageButton
+        android:id="@+id/fivecentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/tencentButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        app:srcCompat="@mipmap/fivecent_icon" />
+
+    <ImageButton
+        android:id="@+id/tencentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/fivecentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fivecentButton"
+        app:layout_constraintTop_toTopOf="@+id/fivecentButton"
+        app:srcCompat="@mipmap/tencent_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
