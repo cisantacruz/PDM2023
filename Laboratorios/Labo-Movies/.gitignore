@@ -1,5 +1,7 @@
 *.iml
 .gradle
+.DS_Store
+**/.DS_Store
 /local.properties
 /.idea/caches
 /.idea/libraries
