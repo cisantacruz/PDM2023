@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_gap">16dp</dimen>
+    <dimen name="moviedetail_vertical_margin">60dp</dimen>
+    <dimen name="moviedetail_horizontal_margin">40dp</dimen>
+</resources>
