@@ -1,99 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundLayout"
-    tools:context=".ui.movies.Movie_new">
+    xmlns:tools="http://schemas.android.com/tools">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.lab5.ui.movies.MovieViewModel" />
+    </data>
+    <FrameLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/default_gap">
+        android:background="@color/backgroundLayout"
+        tools:context=".ui.movies.Movie_new">
 
 
-        <TextView
-            android:id="@+id/textView6"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="New Movie"
-            android:textAlignment="center"
-            android:textSize="40sp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/default_gap">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nameField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/Name"
-            app:boxBackgroundColor="@color/cardLayout"
-            android:layout_marginBottom="@dimen/default_gap">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nameFieldData"
+            <TextView
+                android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="New Movie"
+                android:textAlignment="center"
+                android:textSize="40sp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/categoryField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/default_gap"
-            android:hint="@string/Category"
-            app:boxBackgroundColor="@color/cardLayout">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/categoryFieldData"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/Name"
+                app:boxBackgroundColor="@color/cardLayout"
+                android:layout_marginBottom="@dimen/default_gap">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameFieldData"
+                    android:text="@={viewmodel.name}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/descriptionField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/default_gap"
-            android:hint="@string/Description"
-            app:boxBackgroundColor="@color/cardLayout">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/descriptionFieldData"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/categoryField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:hint="@string/Category"
+                app:boxBackgroundColor="@color/cardLayout">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/categoryFieldData"
+                    android:text="@={viewmodel.category}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/calificationField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/default_gap"
-            android:hint="@string/Calification"
-            app:boxBackgroundColor="@color/cardLayout">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/calificationFieldData"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:hint="@string/Description"
+                app:boxBackgroundColor="@color/cardLayout">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionFieldData"
+                    android:text="@={viewmodel.description}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/newmovieButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/buttonColor"
-            android:text="Submit"
-            android:textAlignment="center"
-            android:layout_gravity="center"/>
-    </LinearLayout>
-</FrameLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/calificationField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:hint="@string/Calification"
+                app:boxBackgroundColor="@color/cardLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/calificationFieldData"
+                    android:text="@={viewmodel.calification}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/newmovieButton"
+                android:onClick="@{()->viewmodel.createMovie()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/buttonColor"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
