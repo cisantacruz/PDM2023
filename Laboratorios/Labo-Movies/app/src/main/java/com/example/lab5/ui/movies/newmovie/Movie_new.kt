@@ -1,4 +1,4 @@
-package com.example.lab5.ui.movies
+package com.example.lab5.ui.movies.newmovie
 
 import android.os.Bundle
 import android.util.Log
@@ -10,9 +10,9 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.lab5.R
 import com.example.lab5.data.model.MovieModel
 import com.example.lab5.databinding.FragmentMovieNewBinding
+import com.example.lab5.ui.movies.viewmodel.MovieViewModel
 
 class Movie_new : Fragment() {
 
@@ -78,7 +78,7 @@ class Movie_new : Fragment() {
         submitButton = view?.findViewById(R.id.newmovieButton) !!
     }*/
 
-    private fun addMovie(){
+    /*private fun addMovie(){
         val name = nameEditText.text.toString()
         val category = categoryEditText.text.toString()
         val description = descriptionEditText.text.toString()
@@ -89,7 +89,7 @@ class Movie_new : Fragment() {
         movieViewModel.addMovies(movie)
 
         findNavController().popBackStack()
-    }
+    }*/
 
     companion object{
         const val APP_TAG = "APP TAG"

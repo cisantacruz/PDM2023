@@ -1,4 +1,4 @@
-package com.example.lab5.ui.movies
+package com.example.lab5.ui.movies.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -59,6 +59,13 @@ class MovieViewModel(private  val repository: MovieRepository) : ViewModel() {
 
     fun clearStatus(){
         status.value= INACTIVE
+    }
+
+    fun setSelectedMovie(movie: MovieModel){
+        name.value=movie.name
+        category.value=movie.category
+        description.value=movie.description
+        calification.value=movie.calification
     }
 
     companion object {
