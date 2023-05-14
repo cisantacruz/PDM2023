@@ -1,8 +1,7 @@
-package com.example.lab5.ui.movies.billboard.recyclerview
+package com.example.lab5.ui.movie.billboard.recyclerview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.ViewParent
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lab5.data.model.MovieModel
 import com.example.lab5.databinding.MovieItemBinding

@@ -1,4 +1,4 @@
-package com.example.lab5.ui.movies.newmovie
+package com.example.lab5.ui.movie.newmovie
 
 import android.os.Bundle
 import android.util.Log
@@ -10,9 +10,8 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.lab5.data.model.MovieModel
 import com.example.lab5.databinding.FragmentMovieNewBinding
-import com.example.lab5.ui.movies.viewmodel.MovieViewModel
+import com.example.lab5.ui.movie.viewmodel.MovieViewModel
 
 class Movie_new : Fragment() {
 
@@ -20,11 +19,11 @@ class Movie_new : Fragment() {
         MovieViewModel.Factory
     }
 
-    private lateinit var nameEditText: EditText
+    /*private lateinit var nameEditText: EditText
     private lateinit var categoryEditText: EditText
     private lateinit var descriptionEditText: EditText
     private lateinit var calificationEditText: EditText
-    private lateinit var submitButton: Button
+    private lateinit var submitButton: Button*/
 
     private lateinit var binding: FragmentMovieNewBinding
 
@@ -36,6 +35,16 @@ class Movie_new : Fragment() {
         //return inflater.inflate(R.layout.fragment_movie_new, container, false)
         binding= FragmentMovieNewBinding.inflate(inflater,container,false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        /*bind()
+        submitButton.setOnClickListener{
+            addMovie()
+        }*/
+        setViewModel()
+        observeStatus()
     }
 
     private fun setViewModel(){
@@ -58,16 +67,6 @@ class Movie_new : Fragment() {
                 }
             }
         }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        /*bind()
-        submitButton.setOnClickListener{
-            addMovie()
-        }*/
-        setViewModel()
-        observeStatus()
     }
 
     /*fun bind(){

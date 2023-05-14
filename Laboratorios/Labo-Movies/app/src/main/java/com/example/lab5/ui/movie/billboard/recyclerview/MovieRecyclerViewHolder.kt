@@ -1,4 +1,4 @@
-package com.example.lab5.ui.movies.billboard.recyclerview
+package com.example.lab5.ui.movie.billboard.recyclerview
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lab5.data.model.MovieModel

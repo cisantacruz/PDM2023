@@ -1,11 +1,9 @@
-package com.example.lab5.ui.movies.billboard
+package com.example.lab5.ui.movie.billboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -14,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lab5.R
 import com.example.lab5.data.model.MovieModel
 import com.example.lab5.databinding.FragmentMovieListBinding
-import com.example.lab5.ui.movies.billboard.recyclerview.MovieRecyclerViewAdapter
-import com.example.lab5.ui.movies.viewmodel.MovieViewModel
+import com.example.lab5.ui.movie.billboard.recyclerview.MovieRecyclerViewAdapter
+import com.example.lab5.ui.movie.viewmodel.MovieViewModel
 
 /* *
 

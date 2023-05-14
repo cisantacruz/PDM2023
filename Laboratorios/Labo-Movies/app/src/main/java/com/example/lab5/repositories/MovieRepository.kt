@@ -1,10 +1,10 @@
 package com.example.lab5.repositories
 
 import com.example.lab5.data.model.MovieModel
-import com.example.lab5.data.movies
+//import com.example.lab5.data.movies
 
-class MovieRepository(private val movies: MutableList<MovieModel>){
-    fun getMovies() = movies
+class MovieRepository(private val Movies: MutableList<MovieModel>){
+    fun getMovies() = Movies
 
-    fun addMovies(movie: MovieModel) = movies.add(movie)
+    fun addMovies(Movie: MovieModel) = Movies.add(Movie)
 }

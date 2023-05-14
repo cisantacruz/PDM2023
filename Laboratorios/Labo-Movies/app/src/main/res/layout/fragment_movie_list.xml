@@ -6,14 +6,14 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.lab5.ui.movies.viewmodel.MovieViewModel" />
+            type="com.example.lab5.ui.movie.viewmodel.MovieViewModel" />
     </data>
 
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundLayout"
-    tools:context=".ui.movies.billboard.MovieList">
+    tools:context=".ui.movie.billboard.MovieList">
 
     <LinearLayout
         android:layout_width="match_parent"

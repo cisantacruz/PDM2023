@@ -1,4 +1,4 @@
-package com.example.lab5.ui.movies
+package com.example.lab5.ui.movie
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.lab5.R
-import com.example.lab5.ui.movies.viewmodel.MovieViewModel
 import com.example.lab5.databinding.FragmentMovieDetailsBinding
+import com.example.lab5.ui.movie.viewmodel.MovieViewModel
 
 class MovieDetails : Fragment() {
 
