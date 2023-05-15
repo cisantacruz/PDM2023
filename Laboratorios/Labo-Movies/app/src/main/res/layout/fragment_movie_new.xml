@@ -6,12 +6,12 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.lab5.ui.movies.MovieViewModel" />
+            type="com.example.lab5.ui.movie.viewmodel.MovieViewModel" />
     </data>
     <FrameLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/backgroundLayout"
-        tools:context=".ui.movies.Movie_new">
+        tools:context=".ui.movie.newmovie.Movie_new">
 
 
         <LinearLayout

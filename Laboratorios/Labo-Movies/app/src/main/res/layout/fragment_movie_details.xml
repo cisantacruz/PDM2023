@@ -1,72 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundLayout"
-    tools:context=".ui.movies.MovieDetails">
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.lab5.ui.movie.viewmodel.MovieViewModel" />
+    </data>
 
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/default_gap">
+        android:background="@color/backgroundLayout"
+        tools:context=".ui.movie.MovieDetails">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/moviedetail_horizontal_margin"
-            android:layout_marginTop="@dimen/moviedetail_vertical_margin"
-            android:layout_marginRight="@dimen/moviedetail_horizontal_margin"
-            android:layout_marginBottom="@dimen/moviedetail_vertical_margin"
-            android:adjustViewBounds="true"
-            android:src="@drawable/star_wars" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Star Wars episodio 3: La venganza de los Sith"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/default_gap">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/moviedetail_horizontal_margin"
+                android:layout_marginTop="@dimen/moviedetail_vertical_margin"
+                android:layout_marginRight="@dimen/moviedetail_horizontal_margin"
+                android:layout_marginBottom="@dimen/moviedetail_vertical_margin"
+                android:adjustViewBounds="true"
+                android:src="@drawable/star_wars" />
 
             <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Ciencia Ficción"
+                android:text="Star Wars episodio 3: La venganza de los Sith"
                 android:textAlignment="center"
-                android:textSize="16sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ciencia Ficción"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="9.8"
+                    android:textAlignment="center"
+                    android:textColor="@color/calification"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9.8"
-                android:textAlignment="center"
-                android:textColor="@color/calification"
-                android:textSize="24sp" />
+                android:text="La película se centra en el personaje de Anakin Skywalker, quien está siendo tentado por el Lado Oscuro de la Fuerza mientras el Imperio Galáctico comienza a surgir. La trama también muestra la cída de la República Galáctica y el ascenso del Emperador Palpatine." />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="La película se centra en el personaje de Anakin Skywalker, quien está siendo tentado por el Lado Oscuro de la Fuerza mientras el Imperio Galáctico comienza a surgir. La trama también muestra la cída de la República Galáctica y el ascenso del Emperador Palpatine." />
 
-    </LinearLayout>
-
-
-</FrameLayout>
+    </FrameLayout>
+</layout>

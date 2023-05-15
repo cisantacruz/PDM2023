@@ -1,4 +1,4 @@
-package com.example.lab5.ui.movies
+package com.example.lab5.ui.movie.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,7 +19,7 @@ class MovieViewModel(private  val repository: MovieRepository) : ViewModel() {
 
     fun getMovies() = repository.getMovies()
 
-    fun addMovies(movie: MovieModel) = repository.addMovies(movie)
+    private fun addMovies(movie: MovieModel) = repository.addMovies(movie)
 
     fun createMovie(){
 
@@ -71,5 +71,12 @@ class MovieViewModel(private  val repository: MovieRepository) : ViewModel() {
         const val MOVIE_CREATED = "Movie Created"
         const val WRONG_INFORMATION = "Wrong Information"
         const val INACTIVE = ""
+    }
+
+    fun setSelectedMovie(movie: MovieModel){
+        name.value=movie.name
+        category.value=movie.category
+        description.value=movie.description
+        calification.value=movie.calification
     }
 }
